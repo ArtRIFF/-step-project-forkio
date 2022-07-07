@@ -1,0 +1,14 @@
+@import 'vars';
+@import 'mixin';
+@import 'fonts';
+@import '../../node_modules/normalize.css/normalize.css';
+@import 'basic';
+
+@import './layout/header';
+@import './component/btns';
+@import './component/btn-menu';
+
+@import './layout/section_revolution';
+@import './layout/section_about';
+
+@import './layout/footer';

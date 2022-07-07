@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $base-font, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,h2,h3,h4,h5,p{
+  margin: 0;
+}
+
+//!Container
+.container {
+  width: $notebook-size;
+  margin: 0 auto;
+  padding: 0 10px;
+  align-self: center;
+
+   @media (max-width:$notebook-size) {
+    width: 100%;
+    padding: 0;
+   }
+}
+
+.section-title {
+  color:white;
+  @include font-value(700, 48px, 50px);
+
+  @media (max-width: 480px) {
+    @include font-value(700, 36px, 48px);
+   }
+}
+
+.hide {
+  display: none;
+}
+
