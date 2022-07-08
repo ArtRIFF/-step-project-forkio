@@ -29,25 +29,28 @@
   padding: 23px 61px;
   text-align: center;
   cursor: pointer;
-  background-color: #8d81ac;
+  background-color: $accent-color;
   border-radius: 40px;
-  font-weight: 700;
-  font-size: 21px;
+  @include font-value(700, 21px, 21px);
   color: #ffffff;
+  transition: transform 0.6s;
   border: 2px solid #8d81ac;
 
   &__text {
     text-align: center;
     margin-top: 19px;
-    font-weight: 400;
-    font-size: 14px;
+    @include font-value(400, 14px, 14px);
     color: #848e97;
   }
   &:hover {
     background-color: white;
-    color: #8d81ac;
+    color: $accent-color;
   }
+  &:active {
+      transform: scale(0.8);
+    }
 }
+
 @media (max-width: 480px) {
   .download-btn {
     max-width: 290px;
@@ -60,9 +63,7 @@
 .revolution-title {
   padding: 0 10px;
   text-align: center;
-  font-weight: 700;
-  font-size: 54px;
-  text-transform: uppercase;
+  @include font-value(700, 54px, 54px, uppercase);
   color: #635c73;
 }
 @media (max-width: 993px) {
@@ -82,16 +83,13 @@
   padding: 35px 10px 25px 10px;
   font-family: "Lato", sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 21px;
-  line-height: 32px;
+  @include font-value(400, 21px, 32px);
   text-align: center;
   color: #323232;
 }
 @media (max-width: 480px) {
   .revolution-subtitle {
-    font-size: 14px;
-    line-height: 20px;
+    @include font-value(400, 14px, 20px);
   }
 }
 
@@ -116,18 +114,17 @@
     margin-right: 10px;
   }
 
-  &_current {
+  &__current {
     padding: 4px 6px;
     color: #24292f;
-    font-weight: 400;
-    font-size: 12px;
+    @include font-value(400, 12px, 20px);
     background-color: rgba(27, 31, 36, 0.08);
     border-radius: 15px;
   }
   &-icon {
     display: flex;
     align-items: center;
-    &_name {
+    &__name {
       display: inline-block;
       padding: 0 8px;
       color: #24292f;
@@ -153,10 +150,9 @@
 
   &__title {
     min-width: 580px;
-    padding-left: 20px;
-    font-weight: 700;
-    font-size: 48px;
-    color: #8d81ac;
+    padding-left: 30px;
+    @include font-value(700, 48px, 40px);
+    color: $accent-color;
   }
 }
 @media (max-width: 480px) {
@@ -169,25 +165,22 @@
   max-width: 500px;
   grid-template-columns: 1fr 4fr;
   padding-bottom: 34px;
-  &_img {
+  &__img {
     margin: $margin-center;
     min-width: 110px;
   }
 
-  &_info {
+  &__info {
     margin-left: 23px;
   }
-  &_title {
+  &__title {
     padding-top: 8px;
     padding-bottom: 12px;
-    font-weight: 400;
-    font-size: 16px;
+    @include font-value(400, 16px, 16px);
     color: #323232;
   }
-  &_text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
+  &__text {
+    @include font-value(400, 14px, 21px);
     color: #848e97;
   }
 }
@@ -201,11 +194,17 @@
 }
 
 .html-page-img {
+  display: block;
   position: absolute;
+  padding-left: 14px;
+  img {
+    width: 100%;
+ }
 }
 @media screen and (max-width: 992px) {
   .html-page-img {
     position: absolute;
+    padding-left: 0px;
     bottom: 0px;
     right: 0px;
   }
@@ -219,10 +218,11 @@
     padding-top: 0;
     padding-bottom: 50%;
     flex-direction: column-reverse;
+
     &__title {
       text-align: center;
       margin: 0 auto;
-      padding-left: 0;
+      padding-left: 0px;
       min-width: 0;
       font-size: 40px;
       margin-bottom: 50px;

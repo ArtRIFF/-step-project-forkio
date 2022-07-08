@@ -43,9 +43,6 @@ h1,h2,h3,h4,h5,p{
   color:white;
   @include font-value(700, 48px, 50px);
 
-  @media (max-width: 480px) {
-    @include font-value(700, 36px, 48px);
-   }
 }
 
 .hide {
