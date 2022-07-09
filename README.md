@@ -1,8 +1,9 @@
 # Макет Forkio
-    
+
     Верстка макету степ-проекту групи FE 1 Online
 
-### Github pages:  <https://artriff.github.io/-step-project-forkio/index.html>
+### Github pages: <https://artriff.github.io/-step-project-forkio/index.html>
+
 ---
 
 ## Використані технології
@@ -40,4 +41,4 @@
         - Верстка шапки сайту
         - Створення і адапаптація верхньго меню
         - Верстка серції People Are Talking About Fork
-        - Розміщення проекту в інтернеті за допомогою хостингу за допомогою Github pages
+        - Розміщення проекту в інтернеті за допомогою хостингу Github pages
